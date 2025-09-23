@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-
+/*
     int maxespace = 6;
     int pos1 = 1;
     int pos6 = 2 * maxespace - 1; 
@@ -22,23 +22,24 @@ int main() {
 
     return 0;
 
-/*
-    printf("1.       *\n");
-    printf("2.      *\n");
-    printf("3.     *\n");
-    printf("4.*   *\n");
-    printf("5. * *\n");
-    printf("6.  *\n");
-
+*/
     float r;
-
+    debut: 
     printf("Please enter the r value: ");
     scanf("%f", &r);
 
-    float v = (4.0/3.0) * 3.14159 * r * r * r;
+    if (r > 0)
+    {
+        float v = (4.0/3.0) * 3.14159 * r * r * r;
 
-    printf("Volume: %f\n", v);
-
+        printf("Volume: %f\n", v);
+    }
+    else
+    {
+        goto debut;
+    }
+    
+/*
     int dollar;
     int cent;
 
