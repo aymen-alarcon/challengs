@@ -1,6 +1,27 @@
 #include <stdio.h>
 
 int main() {
+
+    int maxespace = 6;
+    int pos1 = 1;
+    int pos6 = 2 * maxespace - 1; 
+
+    for (int i = 1; i <= maxespace; i++) {
+        printf("%d.", i);
+        for (int j = 1; j <= 2 * maxespace - 1; j++) {
+            if (j == pos1 || j == pos6) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+        pos1++;
+        pos6--;
+    }
+
+    return 0;
+
 /*
     printf("1.       *\n");
     printf("2.      *\n");
@@ -67,7 +88,7 @@ int main() {
     printf("Billets de 10 : %d \n", count10);
     printf("Billets de 5 : %d \n", count5);
     printf("Billets de 1 : %d \n", count1);
-*/
+
     float p;
     float i;
     float pm;
@@ -93,5 +114,5 @@ int main() {
     p = p + (p * i) - pm;
     printf("p restant après le deuxième paiement : %.2f \n", p);
     p = p + (p * i) - pm;
-    printf("p restant après le deuxième paiement : %.2f \n", p);
+    printf("p restant après le deuxième paiement : %.2f \n", p);*/
 }
