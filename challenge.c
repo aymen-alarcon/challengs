@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-
+/*
     printf("1.       *\n");
     printf("2.      *\n");
     printf("3.     *\n");
@@ -67,7 +67,7 @@ int main() {
     printf("Billets de 10 : %d \n", count10);
     printf("Billets de 5 : %d \n", count5);
     printf("Billets de 1 : %d \n", count1);
-
+*/
     float p;
     float i;
     float pm;
