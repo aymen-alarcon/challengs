@@ -66,9 +66,24 @@ int main() {
             ptr = strchr(ptr, slide) + 1;
         }
     }*/
-    
+
     //second question
-    int time[] = {8 * 60 ,  9 * 60 + 43, 11 * 60 + 19, 12 * 60 + 47, 14 * 60, 15 * 60 + 45, 19 * 60, 21 * 60 + 45};
+/*
+    int nmbr;
+    int nmbrvs;
+
+    printf("Entrez un nombre à deux chiffres : \n");
+    scanf("%d", &nmbr);
+
+    while (str)
+    {
+      
+    }
+    
+    */
+    //third question
+    /*
+    int time[] = {8 / 60 ,  9 * 60 + 43, 11 * 60 + 19, 12 * 60 + 47, 14 * 60, 15 * 60 + 45, 19 * 60, 21 * 60 + 45};
     int timea[] = {10 * 60 + 16, 11 * 60 + 52, 13 * 60 + 31, 15 * 60, 16 * 60 + 8 , 17 * 60 + 55, 21 * 60 + 20, 23 * 60 + 58};
     int h;
     int m;
@@ -102,5 +117,33 @@ int main() {
     mina = timea[min_i];
 
     printf("L'heure de départ la plus proche est  %d, %.2d et le temp d'arrivé est  %d, %.2d ",mind/60, mind%60 ,mina/60, mina%60);
-}
+    
 
+    //forth question
+
+int nbr;
+printf("enter ");
+scanf("%d", &nbr);
+    switch (nbr) {
+        case 0 ... 59:
+            printf("F");
+            break;
+        case 60 ... 69:
+            printf("E");
+            break;
+        case 70 ... 79:
+            printf("D");
+            break;
+        case 80 ... 89:
+            printf("C");
+            break;
+        case 90 ... 100:
+            printf("B");
+            break;
+        default:
+            printf("Invalid number");
+            break;
+    }
+
+    return 0;
+}*/
