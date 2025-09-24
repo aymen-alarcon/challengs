@@ -1,0 +1,106 @@
+#include <stdio.h>
+#include <string.h>
+ #include <stdlib.h>
+
+int main() {
+  /*
+//first question
+    char myN[50];
+    char GS1[20], id[20], code[20], num[20], chiffre[20];
+    int count;
+    char slide = '-';
+
+    printf("Can you enter the numbers : ");
+    scanf("%s", myN);
+
+    count = strlen(myN);
+    while (count != 17) {
+        printf("Please enter exactly 17 characters: ");
+        scanf("%s", myN);
+        count = strlen(myN);
+    }
+
+    printf("There are %d characters in your input.\n", count);
+
+    char *ptr = myN;
+
+    for (int i = 0; i < 5; i++) {
+
+        if (strchr(ptr, slide) != NULL) {
+            size_t len = strchr(ptr, slide) - ptr;
+            strncpy(GS1, ptr, len);
+            GS1[len] = '\0';
+            printf("GS1 Prefix: %s\n", GS1);
+            ptr = strchr(ptr, slide) + 1;
+        }
+
+        if (strchr(ptr, slide) != NULL) {
+            size_t len = strchr(ptr, slide) - ptr;
+            strncpy(id, ptr, len);
+            id[len] = '\0';
+            printf("id Prefix: %s\n", id);
+            ptr = strchr(ptr, slide) + 1;
+        }
+
+        if (strchr(ptr, slide) != NULL) {
+            size_t len = strchr(ptr, slide) - ptr;
+            strncpy(code, ptr, len);
+            code[len] = '\0';
+            printf("code Prefix: %s\n", code);
+            ptr = strchr(ptr, slide) + 1;
+        }
+
+        if (strchr(ptr, slide) != NULL) {
+            size_t len = strchr(ptr, slide) - ptr;
+            strncpy(num, ptr, len);
+            num[len] = '\0';
+            printf("num Prefix: %s\n", num);
+            ptr = strchr(ptr, slide) + 1;
+        }
+
+        if (strchr(ptr, slide) != NULL) {
+            size_t len = strchr(ptr, slide) - ptr;
+            strncpy(chiffre, ptr, len);
+            chiffre[len] = '\0';
+            printf("chiffre Prefix: %s\n", chiffre);
+            ptr = strchr(ptr, slide) + 1;
+        }
+    }*/
+    
+    //second question
+    int time[] = {8 * 60 ,  9 * 60 + 43, 11 * 60 + 19, 12 * 60 + 47, 14 * 60, 15 * 60 + 45, 19 * 60, 21 * 60 + 45};
+    int timea[] = {10 * 60 + 16, 11 * 60 + 52, 13 * 60 + 31, 15 * 60, 16 * 60 + 8 , 17 * 60 + 55, 21 * 60 + 20, 23 * 60 + 58};
+    int h;
+    int m;
+    int mind = 77777;
+    int mina = 77777;
+    int min_i;
+    int diff;
+
+    printf("can you please enter an hour (make sure it's in 24 format) : ");
+    scanf("%d", &h);
+    printf("can you please enter the minutes : ");
+    scanf("%d", &m);
+
+    m = h * 60 + m;
+    printf("%d \n", m);
+
+    for (int i = 0; i < 8; i++)
+    {
+      diff =time[i] - m;
+      if (diff <mind && diff >= 0)
+      {
+        mind = diff;
+        min_i = i;
+      }else if(diff <mind && diff < 0){
+        diff = diff * -1;
+        mind = diff;
+        min_i = i;
+      }
+    };
+    mind = time[min_i];
+    mina = timea[min_i];
+
+    printf("L'heure de départ la plus proche est  %d, %.2d et le temp d'arrivé est  %d, %.2d ",mind/60, mind%60 ,mina/60, mina%60);
+}
+
