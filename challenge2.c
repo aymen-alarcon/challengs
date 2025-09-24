@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
- #include <stdlib.h>
+#include <stdlib.h>
 
 int main() {
-  /*
+/*
 //first question
     char myN[50];
     char GS1[20], id[20], code[20], num[20], chiffre[20];
@@ -65,24 +65,30 @@ int main() {
             printf("chiffre Prefix: %s\n", chiffre);
             ptr = strchr(ptr, slide) + 1;
         }
-    }*/
-
-    //second question
-/*
-    int nmbr;
-    int nmbrvs;
-
-    printf("Entrez un nombre à deux chiffres : \n");
-    scanf("%d", &nmbr);
-
-    while (str)
-    {
-      
     }
-    
-    */
-    //third question
+*/
+    //second question
+
+int number;
+
+    printf("Entrez un nombre à deux chiffres : ");
+    if (scanf("%d", &number) != 1) return 1;
+
+    while (number < 10 || number > 99) {
+        printf("Entrez un nombre à deux chiffres : ");
+        if (scanf("%d", &number) != 1) return 1;
+    }
+
+    int rev = 0;
+    while (number > 0) {
+        rev = rev * 10 + (number % 10);
+        number /= 10;
+    }
+
+    printf("Le nombre inversé est : %d\n", rev);
     /*
+    //third question
+
     int time[] = {8 / 60 ,  9 * 60 + 43, 11 * 60 + 19, 12 * 60 + 47, 14 * 60, 15 * 60 + 45, 19 * 60, 21 * 60 + 45};
     int timea[] = {10 * 60 + 16, 11 * 60 + 52, 13 * 60 + 31, 15 * 60, 16 * 60 + 8 , 17 * 60 + 55, 21 * 60 + 20, 23 * 60 + 58};
     int h;
@@ -119,7 +125,7 @@ int main() {
     printf("L'heure de départ la plus proche est  %d, %.2d et le temp d'arrivé est  %d, %.2d ",mind/60, mind%60 ,mina/60, mina%60);
     
 
-    //forth question
+//forth question
 
 int nbr;
 printf("enter ");
@@ -145,5 +151,5 @@ scanf("%d", &nbr);
             break;
     }
 
-    return 0;
-}*/
+    return 0;*/
+}
