@@ -151,7 +151,7 @@ scanf("%d", &nbr);
             break;
     }
 
-    return 0;*/
+    return 0;
 
     //fifth question
     int ent1, ent2, small;
@@ -186,4 +186,49 @@ scanf("%d", &nbr);
     {
         printf("%d\n", right[i]);
     }
+*/
+    //question six
+
+
+    int a;
+    int b;
+    int r;
+
+    int tempa;
+    int tempb;
+
+        printf("please enter the first number");
+        scanf("%d", &a);
+        printf("please enter the second number");
+        scanf("%d", &b);
+
+        tempa = a;
+        tempb = b;
+        if (b <= a && b != 0){
+            while (r != 0) {
+                r = a % b;
+                a = b;
+                b = r;
+                
+                
+                
+            }   tempa = tempa/a;
+                tempb = tempb/a; 
+                printf("GCD = %d\n", a);
+        }
+        else if (a <= b && b != 0)
+        {
+            while (r != 0) {
+                r = b % a;
+                b = a;
+                a = r;
+            }
+            printf("GCD = %d\n", b);
+            tempa = tempa/b;
+            tempb = tempb/b; 
+        }
+
+
+
+    printf("%d/%d", tempa, tempb);
 }
