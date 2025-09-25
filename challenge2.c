@@ -66,7 +66,7 @@ int main() {
             ptr = strchr(ptr, slide) + 1;
         }
     }
-*/
+
     //second question
 
 int number;
@@ -86,7 +86,7 @@ int number;
     }
 
     printf("Le nombre inversé est : %d\n", rev);
-    /*
+
     //third question
 
     int time[] = {8 / 60 ,  9 * 60 + 43, 11 * 60 + 19, 12 * 60 + 47, 14 * 60, 15 * 60 + 45, 19 * 60, 21 * 60 + 45};
@@ -152,4 +152,38 @@ scanf("%d", &nbr);
     }
 
     return 0;*/
+
+    //fifth question
+    int ent1, ent2, small;
+    int right[100] = {0};
+    int size = 0;    
+
+    printf("please enter the first integer :");
+    scanf("%d", &ent1);
+    printf("please enter the second integer :");
+    scanf("%d", &ent2);
+    
+    if (ent1 < ent2)
+    {
+        small = ent1;
+    }else
+    {
+        small = ent2;
+    }
+    
+    
+    for (int i = 1; i <= small; i++)
+    {
+        if (ent1 % i == 0 && ent2 % i == 0)
+        {
+            right[size] = i;
+            size++;
+        } 
+    }
+
+    printf("\nCommon divisors:\n");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d\n", right[i]);
+    }
 }
