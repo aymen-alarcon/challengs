@@ -59,12 +59,13 @@ printf("Chiffre : \t");
         
     }
     return 0;
-*/
 
+*/
 //third question
     int mother [10];
     bool digit_seen[10] = {false}; 
-    int digit_repeated[10][10] = {0}; 
+    int digit_repeated[10][10]; 
+    int occ_total[10][10];
     int digit; 
     int count = 0;
     char choice;
@@ -89,6 +90,7 @@ printf("Chiffre : \t");
             while (temp > 0) { 
                 digit = temp % 10;             
                 digit_repeated[i][digit]++;
+                occ_total++;
                 temp /= 10;       
             }              
         }
@@ -113,5 +115,24 @@ printf("Chiffre : \t");
         printf("what do you even want!!!! it's only y or n ediota\n");
         goto debut;
     }
-}
+       /*
+       //forth question
 
+
+    int a[10], i;
+
+    int size = sizeof(a) / sizeof(a[0]);
+
+    printf("Entrez &d nombres:", size); 
+    for (i=0; i < size; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    printf("Dans l'ordre inverse :"); 
+    for (i=1; i >= 0; i--)
+    {
+        printf("%d", a[i]);
+    }
+
+    printf("\n"); */
+}
